@@ -1,9 +1,8 @@
-
 name: Build C++ to EXE
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   workflow_dispatch:
 
 jobs:
@@ -17,7 +16,7 @@ jobs:
       - name: Compile C++
         shell: pwsh
         run: |
-          g++ "tugas4.cpp" -o "tugas4.exe" -std=c++17 -O2
+          g++ "tugas4.cpp" -o "tugas4.exe" -std=c++17 -O2 -static-libgcc -static-libstdc++
 
       - name: Upload EXE
         uses: actions/upload-artifact@v4
