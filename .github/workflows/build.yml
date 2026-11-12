@@ -17,10 +17,10 @@ jobs:
       - name: Compile C++
         shell: pwsh
         run: |
-          g++ "main.cpp" -o "main.exe" -std=c++17 -O2
+          g++ "tugas4.cpp" -o "tugas4.exe" -std=c++17 -O2
 
       - name: Upload EXE
         uses: actions/upload-artifact@v4
         with:
           name: compiled-exe
-          path: main.exe
+          path: tugas4.exe
